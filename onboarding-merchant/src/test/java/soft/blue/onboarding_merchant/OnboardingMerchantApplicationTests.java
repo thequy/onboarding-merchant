@@ -1,4 +1,4 @@
-package soft.blue.onboarding_merchant;
+package soft.blue.onboardingmerchant;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -6,8 +6,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class OnboardingMerchantApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+        @Test
+        void contextLoads() {
+        }
 
 }
