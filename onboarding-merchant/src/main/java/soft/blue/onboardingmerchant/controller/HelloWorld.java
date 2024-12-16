@@ -30,7 +30,7 @@ public class HelloWorld {
         }
     )
     public HelloWorldResponse getHelloWorld() {
-        return new HelloWorldResponse("Hello World!");
+        return new HelloWorldResponse("Hello World");
     }
 
     public static class HelloWorldResponse {
