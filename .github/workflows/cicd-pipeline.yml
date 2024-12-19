@@ -27,10 +27,10 @@ jobs:
 
       - name: Build and test
         # Build và test image được build ra bằng Docker 
+        # docker build -t onboarding-merchant .
+        # docker run onboarding-merchant npm test
         run: |
-          # docker build -t onboarding-merchant .
           docker build --build-arg JAR_FILE=build/libs/\*.jar -t onboarding-merchant .
-          # docker run onboarding-merchant npm test
 
       - name: Push image to Docker Hub
         uses: docker/build-push-action@v2
