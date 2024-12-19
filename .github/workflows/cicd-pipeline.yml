@@ -30,7 +30,7 @@ jobs:
         # docker build -t onboarding-merchant .
         # docker run onboarding-merchant npm test
         run: |
-          docker build --build-arg JAR_FILE=build/libs/\*.jar -t onboarding-merchant .
+          docker build --build-arg JAR_FILE=build/libs/\*.jar -t onboarding-merchant -f ./Dockerfile .
 
       - name: Push image to Docker Hub
         uses: docker/build-push-action@v2
