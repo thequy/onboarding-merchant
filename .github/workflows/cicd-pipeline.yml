@@ -1,4 +1,4 @@
-name: Docker CI/CD Pipeline
+name: Docker CI/CD Pipeline - Sample
 
 # Xác định sự kiện trigger cho pipeline: push lên nhánh staging
 on:
