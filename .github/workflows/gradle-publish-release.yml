@@ -41,8 +41,15 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: Package
-        path: release
-        
+        path: build/libs
+
+    - name: Build and test
+      # Build và test image được build ra bằng Docker 
+      # docker build -t onboarding-merchant .
+      # docker run onboarding-merchant npm test
+      run: |
+        docker build --build-arg JAR_FILE=build/libs/\*.jar -t onboarding-merchant -f ./Dockerfile .
+    
     # NOTE: The Gradle Wrapper is the default and recommended way to run Gradle (https://docs.gradle.org/current/userguide/gradle_wrapper.html).
     # If your project does not have the Gradle Wrapper configured, you can use the following configuration to run Gradle with a specified version.
     #
@@ -73,7 +80,7 @@ jobs:
         # docker build -t onboarding-merchant .
         # docker run onboarding-merchant npm test
         run: |
-          docker build --build-arg JAR_FILE=release/\*.jar -t onboarding-merchant -f ./Dockerfile .
+          docker build --build-arg JAR_FILE=build/libs/\*.jar -t onboarding-merchant -f ./Dockerfile .
 
       - name: Push image to Docker Hub
         uses: docker/build-push-action@v2
