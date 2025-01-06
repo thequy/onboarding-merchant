@@ -1,4 +1,4 @@
-name: Auto-Fix Tagged Issue with OpenHands
+name: Auto-Fix Tagged Issue with OpenHands - Github Hosted
 
 on:
   workflow_call:
