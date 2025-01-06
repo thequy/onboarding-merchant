@@ -57,7 +57,7 @@ jobs:
   auto-fix:
     if: |
       github.event_name == 'workflow_call' ||
-      github.event.label.name == 'fix-me' ||
+      github.event.label.name == 'fix-me-github-hosted' ||
       github.event.label.name == 'fix-me-experimental' ||
       (
         ((github.event_name == 'issue_comment' || github.event_name == 'pull_request_review_comment') &&
@@ -70,8 +70,8 @@ jobs:
         (github.event.review.author_association == 'OWNER' || github.event.review.author_association == 'COLLABORATOR' || github.event.review.author_association == 'MEMBER')
         )
       )
-    # runs-on: ubuntu-latest
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
+    # runs-on: self-hosted
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
