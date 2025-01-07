@@ -53,11 +53,12 @@ permissions:
   pull-requests: write
   issues: write
 
+# github.event.label.name == 'fix-me-github-hosted' ||
 jobs:
   auto-fix:
     if: |
       github.event_name == 'workflow_call' ||
-      github.event.label.name == 'fix-me-github-hosted' ||
+      github.event.label.name == 'fix-me-self-hosted' ||
       github.event.label.name == 'fix-me-experimental' ||
       (
         ((github.event_name == 'issue_comment' || github.event_name == 'pull_request_review_comment') &&
