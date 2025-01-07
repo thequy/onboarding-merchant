@@ -1,4 +1,4 @@
-name: Auto-Fix with OpenHands - Github Hosted
+name: Auto-Fix with OpenHands
 
 on:
   workflow_call:
