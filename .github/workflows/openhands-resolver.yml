@@ -20,7 +20,7 @@ permissions:
 jobs:
   call-openhands-resolver:
     # uses: All-Hands-AI/OpenHands/.github/workflows/openhands-resolver.yml@main
-    uses: thequy/onboarding-merchant/.github/workflows/openhands-github-hosted.yml@main
+    uses: thequy/onboarding-merchant/.github/workflows/openhands-workflow.yml@main
     with:
       macro: ${{ vars.OPENHANDS_MACRO || '@openhands-agent' }}
       max_iterations: ${{ fromJson(vars.OPENHANDS_MAX_ITER || 50) }}

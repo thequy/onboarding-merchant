@@ -1,4 +1,4 @@
-name: Auto-Fix with OpenHands - Github Hosted
+name: Auto-Fix with OpenHands
 
 on:
   workflow_call:
@@ -53,6 +53,8 @@ permissions:
   pull-requests: write
   issues: write
 
+# github.event.label.name == 'fix-me-github-hosted' ||
+# github.event.label.name == 'fix-me-self-hosted' ||
 jobs:
   auto-fix:
     if: |
